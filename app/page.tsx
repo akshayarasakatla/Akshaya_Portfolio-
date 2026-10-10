@@ -18,7 +18,7 @@ export default function Home() {
         </div>
 
       
-        <h1 className="text-6xl font-bold">
+        <h1 className="text-4xl font-bold">
           Hi, I'm Akshaya!
         </h1>
 
@@ -38,6 +38,9 @@ export default function Home() {
             </h3>
             <p className="mt-2 text-black-600">
               Bachelor of Science in Computer Engineering
+            </p>
+            <p className="mt-3 text-black-500">
+              Current relevant courses: ECS 1210, MATH 2417 (Calculus I), ECS 1100
             </p>
             <p className="mt-1 text-sm text-black-500">
               2026-2030
