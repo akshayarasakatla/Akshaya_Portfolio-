@@ -86,3 +86,7 @@ export default function Home() {
     </main>
   );
 }
+<section id="Projects">
+  <h2> My projects:</h2>
+  <div class= "Projects-grid"></div>
+</section>
