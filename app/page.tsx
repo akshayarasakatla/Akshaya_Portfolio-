@@ -80,13 +80,15 @@ export default function Home() {
               Email
             </a>
           </div> 
-
-    <section id="Projects">
-      <h2>My projects:</h2>
+          </section>
+          <section id="Projects" className="mt-12">
+          <h2 className="text-2xl font-semibold">My projects:</h2>
       <div className="Projects-grid">
-      <div className="Project-card">
-    </section>
+      <div className="Project-card"> 
+      </div>
+      </div>
+      </section>
+    </div>
 </main>
 );
-}
 
