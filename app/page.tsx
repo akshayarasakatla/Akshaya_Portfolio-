@@ -79,17 +79,14 @@ export default function Home() {
             >
               Email
             </a>
-          </div>
-        </section>
+          </div> 
 
-      </div>
-    </main>
-  );
-}
-return (
-<section id="Projects">
-  <h2> My projects:</h2>
-  <div class= "Projects-grid"></div>
-</section>
+    <section id="Projects">
+      <h2>My projects:</h2>
+      <div className="Projects-grid">
+      <div className="Project-card">
+    </section>
+</main>
 );
+}
 
