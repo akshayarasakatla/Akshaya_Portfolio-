@@ -75,7 +75,7 @@ export default function Home() {
 
             <a
               href="akshaya.rasakatla@gmail.com"            >
-              Email
+              akshaya.rasakatla@gmail.com
             </a>
           </div> 
           </section>
