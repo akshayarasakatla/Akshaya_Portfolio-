@@ -86,10 +86,10 @@ export default function Home() {
     </main>
   );
 }
-{
+return (
 <section id="Projects">
   <h2> My projects:</h2>
   <div class= "Projects-grid"></div>
 </section>
-}
+);
 
