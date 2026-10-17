@@ -85,6 +85,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold">My projects:</h2>
       <div className="Projects-grid">
       <div className="Project-card"> 
+        <h3> Projects coming soon! </h3>
       </div>
       </div>
       </section>
