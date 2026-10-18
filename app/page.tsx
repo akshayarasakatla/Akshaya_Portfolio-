@@ -74,8 +74,10 @@ export default function Home() {
             </a>
 
             <a
-              href="akshaya.rasakatla@gmail.com"            >
-              akshaya.rasakatla@gmail.com
+              href="mailto:akshaya.rasakatla@gmail.com"
+              className="rounded-lg bg-green-500 px-5 py-3 text-white hover:bg-green-600 transition"
+            >
+akshaya.rasakatla@gmail.com
             </a>
           </div> 
           </section>
