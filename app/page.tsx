@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white-50 px-6 py-16 text-white-900">
+    <main className="min-h-screen bg-black-50 px-6 py-16 text-white-900">
       <div className="mx-auto max-w-2xl">
 
         
