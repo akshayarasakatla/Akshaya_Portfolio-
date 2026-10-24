@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Home() {
   const[activeTab, setActiveTab] = useState("About");
   return (
-    <main className="min-h-screen bg-[#fff9db] px-6 py-16 text-white-900">
+    <main className="min-h-screen bg-[#fff9db] px-6 py-16 text-black-900">
       <div className="mx-auto max-w-2xl">
 
         
@@ -27,7 +27,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold">
           Hi, I'm Akshaya!
         </h1>
-        <p className="mt-4 text-lg text-white-600 leading-relaxed">
+        <p className="mt-4 text-lg text-black-600 leading-relaxed">
         As an aspiring Computer Engineer at the University of Texas at Dallas, I am hoping to create real world impact by bringing together Tech and Business. I am passionate about learning new ways to bring forward innovative solutions and I am always looking for opportunities to grow and learn. I am currently seeking internships and opportunities to gain experience in the field of computer engineering.
         </p>
 </section>
