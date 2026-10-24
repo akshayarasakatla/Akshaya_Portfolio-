@@ -39,7 +39,7 @@ export default function Home() {
             Education
           </h2>
           <div className="mt-4 rounded-xl bg-[#fce4ec] p-6 shadow-sm">
-            <h3 className="text-xl font-bold">
+            <h3 className="text-xl font-bold text-black">
               University of Texas at Dallas
             </h3>
             <p className="mt-2 text-black-600">
@@ -68,7 +68,7 @@ export default function Home() {
               href="https://github.com/akshayarasakatla"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg bg-white-900 px-5 py-3 text-black hover:bg-white-700 transition"
+              className="rounded-lg bg-red-900 px-5 py-3 text-black hover:bg-red-700 transition"
             >
               GitHub
             </a>
@@ -91,10 +91,10 @@ akshaya.rasakatla@gmail.com
           </div> 
           </section>
           <section id="Projects" className="mt-12">
-          <h2 className="text-2xl font-semibold">My projects:</h2>
+          <h2 className="text-2xl font-semibold text-black">My projects:</h2>
       <div className="Projects-grid">
       <div className="Project-card"> 
-        <h3> Projects coming soon! </h3>
+        <h3 className="text-lg font-bold text-black"> Projects coming soon! </h3>
       </div>
       </div>
       </section>
