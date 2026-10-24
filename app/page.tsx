@@ -24,6 +24,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-black">
           About Me
         </h1>
+        <div className="mt-4 rounded-xl bg-[#fce4ec] p-6 shadow-sm text-black">
         <h1 className="text-4xl font-bold text-black">
           Hi, I'm Akshaya!
         </h1>
@@ -37,7 +38,7 @@ export default function Home() {
             Education
           </h2>
 
-          <div className="mt-4 rounded-xl bg-black p-6 shadow-sm">
+          <div className="mt-4 rounded-xl bg-[#fce4ec] p-6 shadow-sm">
             <h3 className="text-xl font-bold">
               University of Texas at Dallas
             </h3>
