@@ -1,11 +1,7 @@
-"use client";
-import {useState} from "react";
 import Image from "next/image";
-
 export default function Home() {
-  const[activeTab, setActiveTab] = useState("About");
   return (
-    <main className="min-h-screen bg-[#fff9db] px-6 py-16 text-black-900">
+    <main className="min-h-screen bg-[#fff9db] px-6 py-16 text-black-900 font-Poppins">
       <div className="mx-auto max-w-2xl">
 
         
