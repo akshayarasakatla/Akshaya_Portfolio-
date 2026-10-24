@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Home() {
   const[activeTab, setActiveTab] = useState("About");
   return (
-    <main className="min-h-screen bg-[#fff9db]-50 px-6 py-16 text-white-900">
+    <main className="min-h-screen bg-[#fff9db] px-6 py-16 text-white-900">
       <div className="mx-auto max-w-2xl">
 
         
