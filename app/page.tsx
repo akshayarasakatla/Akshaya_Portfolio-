@@ -38,7 +38,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold text-black">
             Education
           </h2>
-          <div className="mt-4 rounded-xl bg-[#fce4ec] p-6 shadow-sm">
+          <div className="mt-4 rounded-xl bg-[#fce4ec] p-6 shadow-sm text-black">
             <h3 className="text-xl font-bold text-black">
               University of Texas at Dallas
             </h3>
