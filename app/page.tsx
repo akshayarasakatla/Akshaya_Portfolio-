@@ -2,7 +2,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main 
-    style={{fontFamily: "Poppins"}}
+    style={{fontFamily: "Nunito"}}
     className="min-h-screen bg-[#fff9db] px-6 py-16 text-black-900">
       <div className="mx-auto max-w-2xl">
 
