@@ -21,19 +21,19 @@ export default function Home() {
         </div>
 
       <section className="mb-6">
-        <h1 className="text-4xl font-bold">
+        <h1 className="text-4xl font-bold text-black">
           About Me
         </h1>
-        <h1 className="text-4xl font-bold">
+        <h1 className="text-4xl font-bold text-black">
           Hi, I'm Akshaya!
         </h1>
-        <p className="mt-4 text-lg text-black-600 leading-relaxed">
+        <p className="mt-4 text-lg text-black-600 leading-relaxed text-black">
         As an aspiring Computer Engineer at the University of Texas at Dallas, I am hoping to create real world impact by bringing together Tech and Business. I am passionate about learning new ways to bring forward innovative solutions and I am always looking for opportunities to grow and learn. I am currently seeking internships and opportunities to gain experience in the field of computer engineering.
         </p>
 </section>
         
         <section className="mt-12">
-          <h2 className="text-2xl font-semibold">
+          <h2 className="text-2xl font-semibold text-black">
             Education
           </h2>
 
@@ -58,7 +58,7 @@ export default function Home() {
 
       
         <section className="mt-12">
-          <h2 className="text-2xl font-semibold">
+          <h2 className="text-2xl font-semibold text-black">
             Contact Information:
           </h2>
 
@@ -67,7 +67,7 @@ export default function Home() {
               href="https://github.com/akshayarasakatla"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg bg-white-900 px-5 py-3 text-white hover:bg-white-700 transition"
+              className="rounded-lg bg-white-900 px-5 py-3 text-black hover:bg-white-700 transition"
             >
               GitHub
             </a>
