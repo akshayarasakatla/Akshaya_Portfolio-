@@ -1,8 +1,11 @@
+"use client";
+import {useState} from "react";
 import Image from "next/image";
 
 export default function Home() {
+  const[activeTab, setActiveTab] = useState("About");
   return (
-    <main className="min-h-screen bg-black-50 px-6 py-16 text-white-900">
+    <main className="min-h-screen bg-[#fff9db]-50 px-6 py-16 text-white-900">
       <div className="mx-auto max-w-2xl">
 
         
@@ -17,15 +20,17 @@ export default function Home() {
           />
         </div>
 
-      
+      <section className="mb-6">
+        <h1 className="text-4xl font-bold">
+          About Me
+        </h1>
         <h1 className="text-4xl font-bold">
           Hi, I'm Akshaya!
         </h1>
-
         <p className="mt-4 text-lg text-white-600 leading-relaxed">
         As an aspiring Computer Engineer at the University of Texas at Dallas, I am hoping to create real world impact by bringing together Tech and Business. I am passionate about learning new ways to bring forward innovative solutions and I am always looking for opportunities to grow and learn. I am currently seeking internships and opportunities to gain experience in the field of computer engineering.
         </p>
-
+</section>
         
         <section className="mt-12">
           <h2 className="text-2xl font-semibold">
@@ -33,18 +38,21 @@ export default function Home() {
           </h2>
 
           <div className="mt-4 rounded-xl bg-black p-6 shadow-sm">
-            <h3 className="text-xl font-medium">
+            <h3 className="text-xl font-bold">
               University of Texas at Dallas
             </h3>
             <p className="mt-2 text-black-600">
               Bachelor of Science in Computer Engineering
             </p>
-            <p className="mt-3 text-black-500">
-              Current relevant courses: ECS 1210, MATH 2417 (Calculus I), ECS 1100
+            <p className="mt-3 text-black-500 font-bold">
+              Current Relevant courses: ECS 1210, MATH 2417 (Calculus I), ECS 1100
             </p>
             <p className="mt-1 text-sm text-black-500">
-              2026-2030
+              <strong>Graduation:</strong> 2026-2030
             </p>
+            <p className="mt-1 text-sm text-black-500">
+              <strong> Skills:</strong> Learning Python, Git, JavaScript 
+          </p>
           </div>
         </section>
 
