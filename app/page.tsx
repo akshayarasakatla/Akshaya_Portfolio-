@@ -1,3 +1,5 @@
+import react from "react";
+
 import Image from "next/image";
 export default function Home() {
   return (
@@ -88,6 +90,10 @@ akshaya.rasakatla@gmail.com
             </a>
           </div> 
           </section>
+          const projects = [
+  {
+    number: "01",
+    title: "Projects coming soon!",}
           <section id="Projects" className="mt-12">
           <h2 className="text-2xl font-semibold text-black">My projects:</h2>
       <div className="Projects-grid">

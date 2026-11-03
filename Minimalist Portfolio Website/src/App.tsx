@@ -1,5 +1,3 @@
-import React from "react"
-
 const projects = [
   {
     number: "01",
@@ -94,6 +92,11 @@ export default function App() {
               <li>
                 <a className="nav-link" href="#skills">
                   Skills
+                </a>
+              </li>
+              <li>
+                <a className="nav-link" href="#education">
+                  Education
                 </a>
               </li>
             </ul>
@@ -206,16 +209,115 @@ export default function App() {
                     </div>
                   </div>
                   <div className="hidden justify-end md:col-span-1 md:flex">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-transform group-hover:scale-105">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 transition-all group-hover:border-white group-hover:bg-white group-hover:text-[#19324C]">
                       <Arrow diagonal />
                     </span>
                   </div>
                 </article>
               ))}
+              <div className="border-t border-white/20" />
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="mx-auto grid max-w-[1440px] gap-12 border-b border-[#19324C]/20 px-5 py-24 md:grid-cols-12 md:px-10 md:py-32 lg:px-16"
+          id="skills"
+        >
+          <div className="md:col-span-3">
+            <p className="section-label">03 — Skills</p>
+          </div>
+          <div className="grid gap-12 sm:grid-cols-3 md:col-span-8 md:col-start-5">
+            {skills.map((skill, index) => (
+              <div key={skill.title}>
+                <span className="mb-6 block font-mono text-xs text-[#19324C]/35">
+                  0{index + 1}
+                </span>
+                <h2 className="mb-6 text-2xl tracking-[-0.03em]">
+                  {skill.title}
+                </h2>
+                <ul className="space-y-2.5 text-sm text-[#19324C]/55">
+                  {skill.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section
+          className="mx-auto grid max-w-[1440px] gap-12 px-5 py-24 md:grid-cols-12 md:px-10 md:py-32 lg:px-16"
+          id="education"
+        >
+          <div className="md:col-span-3">
+            <p className="section-label">04 — Education</p>
+          </div>
+          <div className="md:col-span-8 md:col-start-5">
+            <div className="grid gap-8 border-t border-[#19324C]/20 py-8 sm:grid-cols-[1fr_auto]">
+              <div>
+                <h2 className="text-2xl tracking-[-0.03em] md:text-3xl">
+                  BFA, Communication Design
+                </h2>
+                <p className="mt-2 text-sm text-[#19324C]/50">
+                  Parsons School of Design, New York
+                </p>
+              </div>
+              <span className="font-mono text-xs text-[#19324C]/45">
+                2014 — 2018
+              </span>
+            </div>
+            <div className="grid gap-8 border-y border-[#19324C]/20 py-8 sm:grid-cols-[1fr_auto]">
+              <div>
+                <h2 className="text-2xl tracking-[-0.03em] md:text-3xl">
+                  Interaction Design Certificate
+                </h2>
+                <p className="mt-2 text-sm text-[#19324C]/50">
+                  Copenhagen Institute of Interaction Design
+                </p>
+              </div>
+              <span className="font-mono text-xs text-[#19324C]/45">2020</span>
             </div>
           </div>
         </section>
       </main>
+
+      <footer className="bg-[#729BBF] text-[#F4F8FB]">
+        <div className="mx-auto max-w-[1440px] px-5 pb-8 pt-20 md:px-10 md:pt-28 lg:px-16">
+          <p className="section-label !text-white/65">
+            Have a project in mind?
+          </p>
+          <a
+            className="group mt-12 flex items-center justify-between border-b border-white/40 pb-5 text-[clamp(2.5rem,7vw,7rem)] leading-none tracking-[-0.06em]"
+            href="mailto:hello@alexmorgan.design"
+          >
+            Let’s talk
+            <span className="transition-transform group-hover:-translate-y-2 group-hover:translate-x-2">
+              <Arrow diagonal />
+            </span>
+          </a>
+          <div className="mt-20 flex flex-wrap items-end justify-between gap-8 text-xs">
+            <p className="max-w-[220px] leading-relaxed text-white/65">
+              Available for select freelance projects and thoughtful
+              collaborations.
+            </p>
+            <div className="flex gap-6">
+              <a className="hover:underline" href="#top">
+                LinkedIn
+              </a>
+              <a className="hover:underline" href="#top">
+                Are.na
+              </a>
+              <a className="hover:underline" href="#top">
+                Instagram
+              </a>
+            </div>
+            <p className="w-full border-t border-white/25 pt-5 text-white/55 md:w-auto md:border-0 md:pt-0">
+              © 2025 Alex Morgan
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

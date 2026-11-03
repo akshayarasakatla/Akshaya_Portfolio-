@@ -1,327 +1,189 @@
-import { useEffect, useState } from 'react'
+import React from "react"
 
-const projects = [
-  {
-    number: '01',
-    type: 'Climate & Community',
-    title: 'Field Notes',
-    description:
-      'A solar-powered garden companion that turns local climate data into simple, useful growing cues.',
-    tags: ['STM32', 'LoRaWAN', 'C++'],
-    accent: 'lime',
-    href: '#contact',
-  },
-  {
-    number: '02',
-    type: 'Calm Technology',
-    title: 'Daylight',
-    description:
-      'An ambient desk light that gently reflects focus time, daily rhythm, and the weather outside.',
-    tags: ['ESP32', 'Sensors', 'React'],
-    accent: 'blue',
-    href: '#contact',
-  },
-  {
-    number: '03',
-    type: 'Interactive Objects',
-    title: 'Common Ground',
-    description:
-      'A playful tabletop installation that responds to touch and makes collaborative patterns with light.',
-    tags: ['Touch', 'LEDs', 'C++'],
-    accent: 'orange',
-    href: '#contact',
-  },
-]
+const projects: any[] = []
 
-const experience = [
-  {
-    year: '2024—NOW',
-    role: 'Embedded Systems Engineer',
-    company: 'Vertex Dynamics',
-    detail: 'Developing low-power firmware and edge-compute systems.',
-  },
-  {
-    year: '2023—24',
-    role: 'Hardware Engineering Intern',
-    company: 'Northstar Labs',
-    detail: 'Prototyped sensor hardware and automated validation tooling.',
-  },
-  {
-    year: '2022—23',
-    role: 'Robotics Researcher',
-    company: 'Autonomous Systems Lab',
-    detail: 'Built control systems for multi-agent ground robots.',
-  },
-]
+const skills: any[] = []
 
 function Arrow({ diagonal = false }: { diagonal?: boolean }) {
   return (
-    <span aria-hidden="true" className="arrow">
-      {diagonal ? '↗' : '→'}
-    </span>
-  )
-}
-
-function ProjectVisual({ accent, number }: { accent: string; number: string }) {
-  if (number === '01') {
-    return (
-      <div className={`project-visual ${accent}`} aria-hidden="true">
-        <div className="radar">
-          <span className="radar-ring ring-1" />
-          <span className="radar-ring ring-2" />
-          <span className="radar-ring ring-3" />
-          <span className="radar-line" />
-          <i className="radar-dot dot-1" />
-          <i className="radar-dot dot-2" />
-          <i className="radar-dot dot-3" />
-        </div>
-        <span className="visual-label">GARDEN / SPRING 2024</span>
-      </div>
-    )
-  }
-
-  if (number === '02') {
-    return (
-      <div className={`project-visual ${accent}`} aria-hidden="true">
-        <div className="chip">
-          {Array.from({ length: 6 }).map((_, index) => (
-            <span key={index} />
-          ))}
-          <div className="chip-core">
-            <small>DAY</small>
-            <strong>01</strong>
-          </div>
-        </div>
-        <span className="visual-label">AMBIENT LIGHT / 06:42</span>
-      </div>
-    )
-  }
-
-  return (
-    <div className={`project-visual ${accent}`} aria-hidden="true">
-      <div className="hand-map">
-        <span className="palm" />
-        <span className="finger f1" />
-        <span className="finger f2" />
-        <span className="finger f3" />
-        <span className="finger f4" />
-        <span className="finger f5" />
-        <i className="joint j1" />
-        <i className="joint j2" />
-        <i className="joint j3" />
-      </div>
-      <span className="visual-label">TOUCH / LIGHT / TOGETHER</span>
-    </div>
+    <svg aria-hidden="true" className="h-4 w-4" fill="none" viewBox="0 0 16 16">
+      {diagonal ? (
+        <path d="M3 13 13 3M5 3h8v8" stroke="currentColor" strokeWidth="1.4" />
+      ) : (
+        <path
+          d="M2 8h12m-4-4 4 4-4 4"
+          stroke="currentColor" strokeWidth="1.4"
+        />
+      )}
+    </svg>
   )
 }
 
 export default function App() {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [time, setTime] = useState('')
-  const [copied, setCopied] = useState(false)
-
-  useEffect(() => {
-    const updateTime = () => {
-      setTime(
-        new Intl.DateTimeFormat('en-US', {
-          hour: '2-digit',
-          minute: '2-digit',
-          hour12: false,
-          timeZone: 'America/Los_Angeles',
-        }).format(new Date()),
-      )
-    }
-    updateTime()
-    const timer = window.setInterval(updateTime, 60_000)
-    return () => window.clearInterval(timer)
-  }, [])
-
-  const copyEmail = async () => {
-    await navigator.clipboard.writeText('hello@alexchen.dev')
-    setCopied(true)
-    window.setTimeout(() => setCopied(false), 1800)
-  }
-
   return (
-    <div className="site-shell">
-      <header className="topbar">
-        <a className="wordmark" href="#top" aria-label="Alex Chen, home">
-          AC<span>/</span>25
-        </a>
-        <nav className={menuOpen ? 'nav-links open' : 'nav-links'} aria-label="Main navigation">
-          <a href="#work" onClick={() => setMenuOpen(false)}>
-            01 Work
+    <div className="min-h-screen bg-[#EAF2F8] text-[#19324C]">
+      <header className="sticky top-0 z-20 border-b border-[#19324C]/15 bg-[#EAF2F8]/90 backdrop-blur-md">
+        <div className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 md:px-10 lg:px-16">
+          <a className="group flex items-center gap-3" href="#top">
+            <span className="h-2.5 w-2.5 rounded-full bg-[#729BBF] transition-transform group-hover:scale-125" />
+            <span className="text-sm font-semibold tracking-[-0.02em]">
+              Computer Engineer Portfolio
+            </span>
           </a>
-          <a href="#about" onClick={() => setMenuOpen(false)}>
-            02 About
-          </a>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>
-            03 Contact
-          </a>
-        </nav>
-        <div className="availability">
-          <span />
-          Open to kind collaborations
+          <nav aria-label="Main navigation">
+            <ul className="flex gap-5 text-[12px] font-medium md:gap-8 md:text-sm">
+              <li>
+                <a className="nav-link" href="#about">
+                  About
+                </a>
+              </li>
+              <li>
+                <a className="nav-link" href="#education">
+                  Education
+                </a>
+              </li>
+              <li>
+                <a className="nav-link" href="#contact">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <button
-          className="menu-button"
-          type="button"
-          aria-expanded={menuOpen}
-          aria-label="Toggle navigation"
-          onClick={() => setMenuOpen((current) => !current)}
-        >
-          {menuOpen ? 'CLOSE' : 'MENU'}
-        </button>
       </header>
 
-      <main>
-        <section className="hero" id="top">
-          <div className="hero-eyebrow">
-            <span>ENGINEER & CREATIVE TECHNOLOGIST</span>
-            <span>BASED IN SAN FRANCISCO</span>
-          </div>
-          <div className="hero-heading">
-            <h1>
-              I MAKE <span className="outline">THOUGHTFUL</span>
+      <main id="top">
+       
+        <section className="mx-auto flex min-h-[calc(100svh-58px)] max-w-[1440px] flex-col justify-between px-5 pb-8 pt-16 md:px-10 md:pb-10 md:pt-24 lg:px-16">
+          <div>
+            
+            <div className="mb-8 md:ml-[34%]">
+              <img
+                src="/profile.jpg"
+                alt="Profile Picture"
+                className="h-44 w-44 rounded-full object-cover border-4 border-white shadow-md"
+              />
+            </div>
+
+            <p className="mb-7 max-w-md text-sm leading-relaxed text-[#19324C]/55 md:ml-[34%]">
+              Aspiring Computer Engineer hoping to create real world impact by bringing together Tech and Business.
+            </p>
+            <h1 className="max-w-[1200px] text-[clamp(4.5rem,12.3vw,11rem)] font-medium leading-[0.78] tracking-[-0.075em]">
+              Tech &
               <br />
-              THINGS <span className="signal">TOGETHER.</span>
+              <span className="ml-[9vw] font-serif font-normal italic tracking-[-0.055em]">
+                Business.
+              </span>
             </h1>
-            <div className="orbit-mark" aria-hidden="true">
-              <span className="orbit orbit-a" />
-              <span className="orbit orbit-b" />
-              <span className="orbit-center" />
-              <span className="orbit-code">MAKE</span>
-            </div>
           </div>
-          <div className="hero-footer">
-            <p>
-              Blending hardware, code, and curiosity to make technology feel a little
-              more useful—and a lot more human.
-            </p>
-            <a href="#work" className="text-link">
-              EXPLORE SELECTED WORK <Arrow />
+          <div className="mt-16 flex items-end justify-between border-t border-[#19324C]/20 pt-5">
+            <span className="text-xs uppercase tracking-[0.12em] text-[#19324C]/50">
+              University of Texas at Dallas
+            </span>
+            <a
+              className="flex items-center gap-2 text-sm font-medium transition-[gap] hover:gap-4"
+              href="#about"
+            >
+              Learn more <Arrow />
             </a>
-            <div className="coordinates">
-              <span>DESIGN WITH CARE</span>
-              <span>BUILD WITH PURPOSE</span>
-              <span>{time || '--:--'} PST</span>
-            </div>
           </div>
         </section>
 
-        <section className="work-section" id="work">
-          <div className="section-heading">
-            <div>
-              <span className="section-index">01 / SELECTED WORK</span>
-              <h2>Made with care.</h2>
-            </div>
-            <p>
-              A few favorite experiments across objects, interfaces, and the spaces
-              between them.
+        {/* About Section */}
+        <section
+          className="mx-auto grid max-w-[1440px] gap-10 border-t border-[#19324C]/20 px-5 py-24 md:grid-cols-12 md:px-10 md:py-32 lg:px-16"
+          id="about"
+        >
+          <div className="md:col-span-3">
+            <p className="section-label">01 — About me</p>
+          </div>
+          <div className="md:col-span-8 md:col-start-5">
+            <p className="text-3xl leading-[1.14] tracking-[-0.04em] md:text-5xl lg:text-6xl">
+              I am passionate about learning new ways to bring forward innovative solutions.
             </p>
-          </div>
-
-          <div className="project-grid">
-            {projects.map((project) => (
-              <article className="project-card" key={project.title}>
-                <ProjectVisual accent={project.accent} number={project.number} />
-                <div className="project-meta">
-                  <span>{project.number}</span>
-                  <span>{project.type}</span>
-                </div>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div className="project-bottom">
-                  <ul>
-                    {project.tags.map((tag) => (
-                      <li key={tag}>{tag}</li>
-                    ))}
-                  </ul>
-                  <a href={project.href} aria-label={`Learn more about ${project.title}`}>
-                    <Arrow diagonal />
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="about-section" id="about">
-          <div className="section-heading about-heading">
-            <div>
-              <span className="section-index">02 / PROFILE</span>
-              <h2>
-                Curious by nature.
-                <br />
-                Human at heart.
-              </h2>
-            </div>
-            <div className="about-copy">
+            <div className="mt-12 grid gap-6 text-[15px] leading-relaxed text-[#19324C]/60 sm:grid-cols-2 md:mt-16">
               <p>
-                I’m Alex, a computer engineer who likes making warm, approachable
-                things from circuits, code, and good questions.
+                As a student at the University of Texas at Dallas, I focus on the intersection of technical hardware/software systems and strategic growth. I am always looking for opportunities to grow, expand my capabilities, and apply classroom theory to real engineering problems.
               </p>
               <p>
-                I’m happiest moving between sketchbooks and schematics—taking ideas
-                from a messy first prototype to something clear, useful, and joyful.
+                I am actively seeking internships and opportunities to gain hands-on experience in the field of computer engineering. Let's connect to build something impactful!
               </p>
             </div>
           </div>
+        </section>
 
-          <div className="experience-wrap">
-            <div className="skills">
-              <span className="section-index">CORE TOOLKIT</span>
-              <div className="skill-list">
-                <span>Creative Coding</span>
-                <span>Physical Prototyping</span>
-                <span>Electronics</span>
-                <span>Interaction Design</span>
-                <span>Embedded Systems</span>
-                <span>Research</span>
-              </div>
-            </div>
-            <div className="timeline">
-              {experience.map((item) => (
-                <div className="experience-row" key={item.company}>
-                  <span className="experience-year">{item.year}</span>
-                  <div>
-                    <h3>{item.role}</h3>
-                    <p>{item.company}</p>
-                  </div>
-                  <p className="experience-detail">{item.detail}</p>
-                </div>
-              ))}
+        {/* Education Section */}
+        <section
+          className="mx-auto grid max-w-[1440px] gap-10 border-t border-[#19324C]/20 px-5 py-24 md:grid-cols-12 md:px-10 md:py-32 lg:px-16"
+          id="education"
+        >
+          <div className="md:col-span-3">
+            <p className="section-label">02 — Education</p>
+          </div>
+          <div className="md:col-span-8 md:col-start-5">
+            <h2 className="text-3xl font-bold tracking-[-0.03em] md:text-4xl text-[#19324C]">
+              University of Texas at Dallas
+            </h2>
+            <p className="mt-2 text-lg font-medium text-[#19324C]/80">
+              Bachelor of Science in Computer Engineering
+            </p>
+            <p className="mt-1 text-sm text-[#19324C]/60">
+              Graduation Timeline: 2026 — 2030
+            </p>
+            
+            <div className="mt-6 border-t border-[#19324C]/10 pt-4">
+              <span className="text-xs uppercase font-semibold tracking-wider text-[#19324C]/50 block mb-2">
+                Current Relevant Courses & Skills
+              </span>
+              <p className="text-sm text-[#19324C]/70 font-mono mb-2">
+                ECS 1210 | MATH 2417 (Calculus I) | ECS 1100
+              </p>
+              <p className="text-sm text-[#19324C]/70">
+                <strong>Skills in development:</strong> Python, Git, JavaScript
+              </p>
             </div>
           </div>
         </section>
 
-        <section className="contact-section" id="contact">
-          <span className="section-index">03 / START A CONVERSATION</span>
-          <h2>
-            Have a curious idea?
-            <br />
-            <span>Let’s make it real.</span>
-          </h2>
-          <div className="contact-bottom">
-            <a href="mailto:hello@alexchen.dev" className="contact-link">
-              hello@alexchen.dev <Arrow diagonal />
-            </a>
-            <button type="button" className="copy-button" onClick={copyEmail}>
-              {copied ? 'COPIED TO CLIPBOARD' : 'COPY EMAIL'}
-            </button>
+        {/* Contact Section */}
+        <section
+          className="mx-auto grid max-w-[1440px] gap-10 border-t border-[#19324C]/20 px-5 py-24 md:grid-cols-12 md:px-10 md:py-32 lg:px-16"
+          id="contact"
+        >
+          <div className="md:col-span-3">
+            <p className="section-label">03 — Contact Information</p>
+          </div>
+          <div className="md:col-span-8 md:col-start-5">
+            <p className="text-2xl font-medium tracking-[-0.03em] text-[#19324C] mb-6">
+              Let's build something together.
+            </p>
+            <div className="flex flex-wrap gap-6">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-semibold uppercase tracking-wider underline hover:text-[#729BBF] transition-colors"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-semibold uppercase tracking-wider underline hover:text-[#729BBF] transition-colors"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="mailto:your-email@utdallas.edu"
+                className="text-sm font-semibold uppercase tracking-wider underline hover:text-[#729BBF] transition-colors"
+              >
+                Email Me
+              </a>
+            </div>
           </div>
         </section>
       </main>
-
-      <footer>
-        <span>© 2025 ALEX CHEN</span>
-        <div>
-          <a href="#top">LINKEDIN</a>
-          <a href="#top">GITHUB</a>
-          <a href="#top">RESUMÉ</a>
-        </div>
-        <a href="#top">BACK TO TOP ↑</a>
-      </footer>
     </div>
   )
 }
