@@ -1,3 +1,6 @@
+import React from "react"
+import "./globals.css"
+
 const projects: any[] = []
 
 const skills: any[] = []
@@ -87,7 +90,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* About Section */}
+        
         <section
           className="mx-auto grid max-w-[1440px] gap-10 border-t border-[#19324C]/20 px-5 py-24 md:grid-cols-12 md:px-10 md:py-32 lg:px-16"
           id="about"
@@ -110,7 +113,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Education Section */}
+      
         <section
           className="mx-auto grid max-w-[1440px] gap-10 border-t border-[#19324C]/20 px-5 py-24 md:grid-cols-12 md:px-10 md:py-32 lg:px-16"
           id="education"
