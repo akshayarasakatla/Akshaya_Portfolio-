@@ -92,7 +92,7 @@ export default function Portfolio() {
               <span className="relative h-2.5 w-2.5 rounded-full bg-pink-500 transition-transform group-hover:scale-125" />
             </span>
             <span className="text-sm font-semibold tracking-[-0.02em] text-[#3B1229]">
-              Computer Engineer Portfolio
+              Computer Engineering Portfolio
             </span>
           </a>
           <nav aria-label="Main navigation">
@@ -125,7 +125,7 @@ export default function Portfolio() {
             className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[#FFF1F5] to-transparent"
           />
 
-          <div className="hero-in hero-in-1 relative mb-8">
+          <div className="hero-in hero-in-1 relative mx-auto md:order-2 md:col-span-4 md:mx-0 md:justify-self-end">
             <div className="absolute -inset-1.5 rounded-full bg-to-br from-white-400 via-white-400 to-pink-500" />
             <div className="relative rounded-full bg-to-br from-white-400/80 via-white-400/80 to-white-500/80 p-[3px]">
               <div className="rounded-full bg-[#FFF1F5] p-1">
@@ -138,11 +138,7 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <p className="hero-in hero-in-2 glass mb-8 inline-flex items-center gap-2.5 rounded-full px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-[#5B2A44]">
-            <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-pink-400 shadow-[0_0_10px_#f472b6]" />
-            University of Texas at Dallas
-          </p>
-
+          
           <h1 className="hero-in hero-in-3 max-w-[1100px] text-[clamp(3.75rem,13vw,10.5rem)] font-bold leading-[0.88] tracking-[-0.06em]">
             <span className="bg-gradient-to-b from-[#3B1229] to-[#A0527A] bg-clip-text text-transparent">
               Akshaya
@@ -150,6 +146,11 @@ export default function Portfolio() {
             <br />
             <span className="bg-gradient-to-b from-[#3B1229] to-[#A0527A] bg-clip-text text-transparent">Rasakatla</span>
           </h1>
+         
+          <p className="hero-in hero-in-2 glass mb-8 inline-flex items-center gap-2.5 rounded-full px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-[#5B2A44]">
+            <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-pink-400 shadow-[0_0_10px_#f472b6]" />
+            University of Texas at Dallas
+          </p>
 
           <p className="hero-in hero-in-4 mt-8 max-w-xl text-base leading-relaxed text-[#7A4A62] md:text-lg">
             Aspiring Computer Engineer hoping to create real world impact by bringing together Tech and Business.
@@ -294,11 +295,6 @@ export default function Portfolio() {
                   className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-pink-400/35 to-fuchsia-400/35 blur-[90px]"
                 />
                 <div className="relative">
-                  <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-2xl border border-[#3B1229]/10 bg-white/80 text-pink-600 shadow-[0_0_30px_-4px_rgba(244,114,182,0.7)]">
-                    <svg aria-hidden="true" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.6" viewBox="0 0 24 24">
-                      <path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
                   <h3 className="text-3xl font-bold tracking-[-0.04em] md:text-5xl">
                     <span className="text">Projects coming soon!</span>
                   </h3>
