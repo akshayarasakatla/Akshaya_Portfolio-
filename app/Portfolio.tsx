@@ -1,11 +1,6 @@
 import React from "react"
 
-/* ------------------------------------------------------------------ */
-/*  Data                                                               */
-/* ------------------------------------------------------------------ */
 
-// Add projects here later: { title, description, tags: string[], href }
-// While empty, the bento grid shows the "Projects coming soon!" state.
 const projects: { title: string; description: string; tags: string[]; href: string }[] = []
 
 const courses = ["ECS 1210", "MATH 2417 (Calculus I)", "ECS 1100"]
@@ -52,9 +47,7 @@ const MailIcon = () => (
   </svg>
 )
 
-/* ------------------------------------------------------------------ */
-/*  Small building blocks                                              */
-/* ------------------------------------------------------------------ */
+
 
 function SectionShell({
   id,
@@ -82,27 +75,25 @@ function Divider() {
   return (
     <div
       aria-hidden="true"
-      className="mx-auto h-px max-w-[1200px] bg-gradient-to-r from-transparent via-white/15 to-transparent"
+      className="mx-auto h-px max-w-[1200px] bg-gradient-to-r from-transparent via-[#3B1229]/20 to-transparent"
     />
   )
 }
 
-/* ------------------------------------------------------------------ */
-/*  Page                                                               */
-/* ------------------------------------------------------------------ */
+
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen overflow-x-clip bg-[#0B0F19] font-sans text-white">
-      {/* ---------------- Header ---------------- */}
-      <header className="sticky top-0 z-30 border-b border-white/[0.07] bg-[#0B0F19]/70 backdrop-blur-xl">
+    <div className="min-h-screen overflow-x-clip bg-[#FFF1F5] font-sans text-[#3B1229]">
+      
+      <header className="sticky top-0 z-30 border-b border-[#3B1229]/10 bg-[#FFF1F5]/70 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-3.5 md:px-10">
           <a className="group flex items-center gap-3" href="#top">
             <span className="relative flex h-2.5 w-2.5">
-              <span className="pulse-dot absolute inset-0 rounded-full bg-emerald-400 blur-[3px]" />
-              <span className="relative h-2.5 w-2.5 rounded-full bg-emerald-400 transition-transform group-hover:scale-125" />
+              <span className="pulse-dot absolute inset-0 rounded-full bg-pink-500 blur-[3px]" />
+              <span className="relative h-2.5 w-2.5 rounded-full bg-pink-500 transition-transform group-hover:scale-125" />
             </span>
-            <span className="text-sm font-semibold tracking-[-0.02em] text-slate-100">
+            <span className="text-sm font-semibold tracking-[-0.02em] text-[#3B1229]">
               Computer Engineer Portfolio
             </span>
           </a>
@@ -118,51 +109,51 @@ export default function Portfolio() {
       </header>
 
       <main id="top">
-        {/* ---------------- Hero ---------------- */}
+        
         <section className="relative isolate flex min-h-[calc(100svh-58px)] flex-col items-center justify-center overflow-hidden px-5 pb-10 pt-16 text-center md:px-10">
-          {/* background layers */}
+          
           <div aria-hidden="true" className="grid-bg absolute inset-0 -z-10" />
           <div aria-hidden="true" className="noise absolute inset-0 -z-10 opacity-60" />
           <div
             aria-hidden="true"
-            className="float-slow absolute left-1/2 top-[8%] -z-10 h-[520px] w-[520px] -translate-x-[85%] rounded-full bg-emerald-500/20 blur-[130px]"
+            className="float-slow absolute left-1/2 top-[8%] -z-10 h-[520px] w-[520px] -translate-x-[85%] rounded-full bg-pink-400/30-blur-[30px]"
           />
           <div
             aria-hidden="true"
-            className="float-slow absolute left-1/2 top-[18%] -z-10 h-[560px] w-[560px] -translate-x-[5%] rounded-full bg-indigo-500/25 blur-[140px] [animation-delay:-4s]"
+            className="float-slow absolute left-1/2 top-[18%] -z-10 h-[560px] w-[560px] -translate-x-[5%] rounded-full bg-pink-400/35-[140px] [animation-delay:-4s]"
           />
           <div
             aria-hidden="true"
-            className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[#0B0F19] to-transparent"
+            className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[#FFF1F5] to-transparent"
           />
 
           <div className="hero-in hero-in-1 relative mb-8">
-            <div className="absolute -inset-1.5 rounded-full bg-gradient-to-br from-emerald-400 via-indigo-400 to-violet-500 opacity-80 blur-md" />
-            <div className="relative rounded-full bg-gradient-to-br from-emerald-400/80 via-indigo-400/80 to-violet-500/80 p-[3px]">
-              <div className="rounded-full bg-[#0B0F19] p-1">
+            <div className="absolute -inset-1.5 rounded-full bg-to-br from-white-400 via-white-400 to-pink-500" />
+            <div className="relative rounded-full bg-to-br from-white-400/80 via-white-400/80 to-white-500/80 p-[3px]">
+              <div className="rounded-full bg-[#FFF1F5] p-1">
                 <img
                   src="/profile.jpg"
                   alt="Profile Picture"
-                  className="h-36 w-36 rounded-full bg-slate-800 object-cover md:h-44 md:w-44"
+                  className="h-36 w-36 rounded-full bg-pink-100 object-cover md:h-70 md:w-44"
                 />
               </div>
             </div>
           </div>
 
-          <p className="hero-in hero-in-2 glass mb-8 inline-flex items-center gap-2.5 rounded-full px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-slate-300">
-            <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_10px_#34d399]" />
+          <p className="hero-in hero-in-2 glass mb-8 inline-flex items-center gap-2.5 rounded-full px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-[#5B2A44]">
+            <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-pink-400 shadow-[0_0_10px_#f472b6]" />
             University of Texas at Dallas
           </p>
 
           <h1 className="hero-in hero-in-3 max-w-[1100px] text-[clamp(3.75rem,13vw,10.5rem)] font-bold leading-[0.88] tracking-[-0.06em]">
-            <span className="bg-gradient-to-b from-white to-slate-400 bg-clip-text text-transparent">
-              Tech &amp;
+            <span className="bg-gradient-to-b from-[#3B1229] to-[#A0527A] bg-clip-text text-transparent">
+              Akshaya
             </span>
             <br />
-            <span className="gradient-text">Business.</span>
+            <span className="bg-gradient-to-b from-[#3B1229] to-[#A0527A] bg-clip-text text-transparent">Rasakatla</span>
           </h1>
 
-          <p className="hero-in hero-in-4 mt-8 max-w-xl text-base leading-relaxed text-slate-400 md:text-lg">
+          <p className="hero-in hero-in-4 mt-8 max-w-xl text-base leading-relaxed text-[#7A4A62] md:text-lg">
             Aspiring Computer Engineer hoping to create real world impact by bringing together Tech and Business.
           </p>
 
@@ -183,20 +174,20 @@ export default function Portfolio() {
 
         <Divider />
 
-        {/* ---------------- About ---------------- */}
+        
         <SectionShell id="about" label="01 — About me">
           <div className="grid gap-12 md:grid-cols-12">
-            <p className="reveal text-3xl font-semibold leading-[1.1] tracking-[-0.04em] text-white md:col-span-12 md:text-5xl lg:text-6xl lg:leading-[1.05]">
+            <p className="reveal text-3xl font-semibold leading-[1.1] tracking-[-0.04em] text-[#3B1229] md:col-span-12 md:text-5xl lg:text-6xl lg:leading-[1.05]">
               <span className="gradient-text">I am passionate</span> about learning new ways to bring forward innovative solutions.
             </p>
 
             <div className="reveal card glass rounded-2xl p-7 md:col-span-6 md:p-8">
-              <p className="text-[15px] leading-relaxed text-slate-400">
+              <p className="text-[15px] leading-relaxed text-[#7A4A62]">
                 As a student at the University of Texas at Dallas, I focus on the intersection of technical hardware/software systems and strategic growth. I am always looking for opportunities to grow, expand my capabilities, and apply classroom theory to real engineering problems.
               </p>
             </div>
             <div className="reveal card glass rounded-2xl p-7 md:col-span-6 md:p-8">
-              <p className="text-[15px] leading-relaxed text-slate-400">
+              <p className="text-[15px] leading-relaxed text-[#7A4A62]">
                 I am actively seeking internships and opportunities to gain hands-on experience in the field of computer engineering. Let's connect to build something impactful!
               </p>
             </div>
@@ -215,10 +206,10 @@ export default function Portfolio() {
                 className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-emerald-500/15 blur-[90px]"
               />
               <p className="meta-label mb-6">Degree</p>
-              <h2 className="text-3xl font-bold tracking-[-0.04em] text-white md:text-5xl">
+              <h2 className="text-3xl font-bold tracking-[-0.04em] text-[#3B1229] md:text-5xl">
                 University of Texas at Dallas
               </h2>
-              <p className="mt-4 text-lg font-medium text-slate-300 md:text-xl">
+              <p className="mt-4 text-lg font-medium text-[#5B2A44] md:text-xl">
                 Bachelor of Science in Computer Engineering
               </p>
             </div>
@@ -233,7 +224,7 @@ export default function Portfolio() {
               <p className="gradient-text text-5xl font-bold tracking-[-0.05em] md:text-6xl">
                 2026 —
               </p>
-              <p className="text-5xl font-bold tracking-[-0.05em] text-white md:text-6xl">2030</p>
+              <p className="text-5xl font-bold tracking-[-0.05em] text-[#3B1229] md:text-6xl">2030</p>
             </div>
 
             {/* Courses */}
@@ -241,7 +232,7 @@ export default function Portfolio() {
               <p className="meta-label mb-5">Current Relevant Courses &amp; Skills</p>
               <ul className="flex flex-wrap gap-2.5">
                 {courses.map((c) => (
-                  <li key={c} className="badge badge-emerald">
+                  <li key={c} className="badge badge-pink">
                     <i /> {c}
                   </li>
                 ))}
@@ -253,7 +244,7 @@ export default function Portfolio() {
               <p className="meta-label mb-5">Skills in development</p>
               <ul className="flex flex-wrap gap-2.5">
                 {skills.map((s) => (
-                  <li key={s} className="badge badge-indigo">
+                  <li key={s} className="badge badge-violet">
                     <i /> {s}
                   </li>
                 ))}
@@ -280,15 +271,15 @@ export default function Portfolio() {
                 >
                   <div>
                     <h3 className="text-2xl font-semibold tracking-[-0.03em]">{p.title}</h3>
-                    <p className="mt-3 text-sm leading-relaxed text-slate-400">{p.description}</p>
+                    <p className="mt-3 text-sm leading-relaxed text-[#7A4A62]">{p.description}</p>
                   </div>
                   <div className="mt-8 flex items-end justify-between">
                     <ul className="flex flex-wrap gap-2">
                       {p.tags.map((t) => (
-                        <li key={t} className="badge badge-indigo">{t}</li>
+                        <li key={t} className="badge badge-violet">{t}</li>
                       ))}
                     </ul>
-                    <span className="grid h-10 w-10 place-items-center rounded-full border border-white/15 transition-colors group-hover:bg-white group-hover:text-[#0B0F19]">
+                    <span className="grid h-10 w-10 place-items-center rounded-full border border-[#3B1229]/15 transition-colors group-hover:bg-[#db2777] group-hover:text-white">
                       <Arrow diagonal />
                     </span>
                   </div>
@@ -302,10 +293,10 @@ export default function Portfolio() {
                 <div aria-hidden="true" className="grid-bg absolute inset-0 opacity-60" />
                 <div
                   aria-hidden="true"
-                  className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-emerald-500/25 to-indigo-500/25 blur-[90px]"
+                  className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-pink-400/35 to-indigo-500/25 blur-[90px]"
                 />
                 <div className="relative">
-                  <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-2xl border border-white/10 bg-white/5 text-emerald-300 shadow-[0_0_30px_-4px_rgba(52,211,153,0.5)]">
+                  <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-2xl border border-[#3B1229]/10 bg-white/80 text-pink-600 shadow-[0_0_30px_-4px_rgba(244,114,182,0.7)]">
                     <svg aria-hidden="true" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.6" viewBox="0 0 24 24">
                       <path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
@@ -347,16 +338,16 @@ export default function Portfolio() {
             <div aria-hidden="true" className="grid-bg absolute inset-0 opacity-50" />
             <div
               aria-hidden="true"
-              className="absolute left-1/2 top-0 h-64 w-[36rem] max-w-full -translate-x-1/2 rounded-full bg-indigo-500/25 blur-[110px]"
+              className="absolute left-1/2 top-0 h-64 w-[36rem] max-w-full -translate-x-1/2 rounded-full bg-fuchsia-200/30"
             />
             <div
               aria-hidden="true"
-              className="absolute bottom-0 left-1/4 h-48 w-72 rounded-full bg-emerald-500/20 blur-[100px]"
+              className="absolute bottom-0 left-1/4 h-48 w-72 rounded-full bg-fuchsia-500/20 blur-[100px]"
             />
             <div className="relative">
               <p className="mx-auto max-w-3xl text-4xl font-bold leading-[1.02] tracking-[-0.05em] md:text-7xl">
-                <span className="bg-gradient-to-b from-white to-slate-400 bg-clip-text text-transparent">
-                  Let's build something together.
+                <span className="bg-gradient-to-b from-black to-400 bg-clip-text">
+                  Let's Connect!
                 </span>
               </p>
 
@@ -392,7 +383,7 @@ export default function Portfolio() {
           <a
             href="#top"
             aria-label="Back to top"
-            className="flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-white"
+            className="flex items-center gap-2 text-sm text-[#7A4A62] transition-colors hover:text-[#3B1229]"
           >
             <span className="-rotate-90"><Arrow /></span>
           </a>
