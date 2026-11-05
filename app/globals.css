@@ -164,6 +164,7 @@ section[id] {
 .btn:active { transform: scale(0.98); }
 
 .btn-primary {
+  border: 1px solid rgba(0, 0, 0, 0.605);
   background: #e1e8ee79;
   color: #0b0f19;
   box-shadow: 0 0 0 0 rgb(52 211 153 / 0);
