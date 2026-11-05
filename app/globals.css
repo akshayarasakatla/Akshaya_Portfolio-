@@ -36,7 +36,7 @@ section[id] {
 
 /* ---------- Focus ---------- */
 :focus-visible {
-  outline: 2px solid #34d399;
+  outline: 2px solid #d334a3;
   outline-offset: 3px;
   border-radius: 8px;
 }
@@ -79,7 +79,7 @@ section[id] {
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgb(52 211 153 / 0.7), transparent 40%, rgb(129 140 248 / 0.7));
+  background: linear-gradient(135deg, rgba(211, 52, 163, 0.7), transparent 40%, rgba(248, 129, 189, 0.7));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -105,14 +105,14 @@ section[id] {
   font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #34d399;
+  color: #db2777;
 }
 
 .section-label::before {
   content: "";
   width: 1.75rem;
   height: 1px;
-  background: linear-gradient(90deg, #34d399, transparent);
+  background: linear-gradient(90deg, #db2777, transparent);
 }
 
 .meta-label {
@@ -120,7 +120,7 @@ section[id] {
   font-size: 0.6875rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #64748b;
+  color: #9985cb;
 }
 
 .badge {
@@ -133,18 +133,18 @@ section[id] {
   background: rgb(255 255 255 / 0.04);
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  color: #cbd5e1;
+  color: #608fc9;
   transition: border-color 200ms ease, background 200ms ease, color 200ms ease, transform 200ms ease;
 }
 
 .badge:hover {
   transform: translateY(-1px);
-  color: #fff;
+  color: #1d38a7;
 }
 
-.badge-emerald:hover { border-color: rgb(52 211 153 / 0.6); background: rgb(52 211 153 / 0.1); }
+.badge-emerald:hover { border-color: rgba(211, 52, 145, 0.6); background: rgb(52 211 153 / 0.1); }
 .badge-indigo:hover  { border-color: rgb(129 140 248 / 0.6); background: rgb(129 140 248 / 0.12); }
-.badge-emerald i { background: #34d399; box-shadow: 0 0 8px #34d399; }
+.badge-emerald i { background: #d3349e; box-shadow: 0 0 8px #d334b3; }
 .badge-indigo i  { background: #818cf8; box-shadow: 0 0 8px #818cf8; }
 .badge i { width: 6px; height: 6px; border-radius: 50%; }
 
@@ -196,12 +196,12 @@ section[id] {
 }
 
 .nav-link:hover {
-  color: #fff;
+  color: #970950;
   background: rgb(255 255 255 / 0.07);
 }
 
 .gradient-text {
-  background: linear-gradient(100deg, #6ee7b7 0%, #34d399 30%, #818cf8 80%, #a78bfa 100%);
+  background: linear-gradient(100deg, #e76ec5 0%, #d3347b 30%, #818cf8 80%, #a78bfa 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

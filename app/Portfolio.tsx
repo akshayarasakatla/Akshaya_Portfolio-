@@ -12,9 +12,7 @@ const links = {
   email: "akshaya.rasakatla@gmail.com",
 }
 
-/* ------------------------------------------------------------------ */
-/*  Icons                                                              */
-/* ------------------------------------------------------------------ */
+
 
 function Arrow({ diagonal = false }: { diagonal?: boolean }) {
   return (
@@ -86,7 +84,7 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen overflow-x-clip bg-[#FFF1F5] font-sans text-[#3B1229]">
       
-      <header className="sticky top-0 z-30 border-b border-[#3B1229]/10 bg-[#FFF1F5]/70 backdrop-blur-xl">
+      <header className="sticky top-0 z-30 border-b border-[#3B1229]/10 bg-[#FFF1F5]/70 backdrop-xl">
         <div className="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-3.5 md:px-10">
           <a className="group flex items-center gap-3" href="#top">
             <span className="relative flex h-2.5 w-2.5">
@@ -178,7 +176,7 @@ export default function Portfolio() {
         <SectionShell id="about" label="01 — About me">
           <div className="grid gap-12 md:grid-cols-12">
             <p className="reveal text-3xl font-semibold leading-[1.1] tracking-[-0.04em] text-[#3B1229] md:col-span-12 md:text-5xl lg:text-6xl lg:leading-[1.05]">
-              <span className="gradient-text">I am passionate</span> about learning new ways to bring forward innovative solutions.
+              <span className="text">I am passionate</span> about learning new ways to bring forward innovative solutions.
             </p>
 
             <div className="reveal card glass rounded-2xl p-7 md:col-span-6 md:p-8">
@@ -196,14 +194,14 @@ export default function Portfolio() {
 
         <Divider />
 
-        {/* ---------------- Education ---------------- */}
+        
         <SectionShell id="education" label="02 — Education">
           <div className="grid gap-4 md:grid-cols-3">
             {/* Main card */}
             <div className="reveal card glass relative overflow-hidden rounded-3xl p-8 md:col-span-2 md:p-10">
               <div
                 aria-hidden="true"
-                className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-emerald-500/15 blur-[90px]"
+                className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-pink-500/15 blur-[90px]"
               />
               <p className="meta-label mb-6">Degree</p>
               <h2 className="text-3xl font-bold tracking-[-0.04em] text-[#3B1229] md:text-5xl">
@@ -214,20 +212,20 @@ export default function Portfolio() {
               </p>
             </div>
 
-            {/* Timeline stat */}
+            
             <div className="reveal card glass relative overflow-hidden rounded-3xl p-8">
               <div
                 aria-hidden="true"
-                className="absolute -bottom-20 -right-20 h-56 w-56 rounded-full bg-indigo-500/20 blur-[80px]"
+                className="absolute -bottom-20 -right-20 h-56 w-56 rounded-full bg-fuchsia-400/25 blur-[80px]"
               />
               <p className="meta-label mb-6">Graduation Timeline</p>
-              <p className="gradient-text text-5xl font-bold tracking-[-0.05em] md:text-6xl">
+              <p className="text text-5xl font-bold tracking-[-0.05em] md:text-6xl">
                 2026 —
               </p>
               <p className="text-5xl font-bold tracking-[-0.05em] text-[#3B1229] md:text-6xl">2030</p>
             </div>
 
-            {/* Courses */}
+           
             <div className="reveal card glass rounded-3xl p-8 md:col-span-2">
               <p className="meta-label mb-5">Current Relevant Courses &amp; Skills</p>
               <ul className="flex flex-wrap gap-2.5">
@@ -255,7 +253,7 @@ export default function Portfolio() {
 
         <Divider />
 
-        {/* ---------------- Projects (bento) ---------------- */}
+        
         <SectionShell id="projects" label="03 — My projects">
           {projects.length > 0 ? (
             <div className="grid gap-4 md:grid-cols-3">
@@ -288,12 +286,12 @@ export default function Portfolio() {
             </div>
           ) : (
             <div className="grid gap-4 md:grid-cols-3 md:grid-rows-2">
-              {/* Hero bento cell */}
+              
               <div className="reveal card glass relative flex min-h-[280px] flex-col items-center justify-center overflow-hidden rounded-3xl p-10 text-center md:col-span-2 md:row-span-2 md:min-h-[420px]">
                 <div aria-hidden="true" className="grid-bg absolute inset-0 opacity-60" />
                 <div
                   aria-hidden="true"
-                  className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-pink-400/35 to-indigo-500/25 blur-[90px]"
+                  className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-pink-400/35 to-fuchsia-400/35 blur-[90px]"
                 />
                 <div className="relative">
                   <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-2xl border border-[#3B1229]/10 bg-white/80 text-pink-600 shadow-[0_0_30px_-4px_rgba(244,114,182,0.7)]">
@@ -302,12 +300,12 @@ export default function Portfolio() {
                     </svg>
                   </div>
                   <h3 className="text-3xl font-bold tracking-[-0.04em] md:text-5xl">
-                    <span className="gradient-text">Projects coming soon!</span>
+                    <span className="text">Projects coming soon!</span>
                   </h3>
                 </div>
               </div>
 
-              {/* Skeleton cells */}
+              
               {[0, 1].map((n) => (
                 <div
                   key={n}
@@ -332,7 +330,7 @@ export default function Portfolio() {
 
         <Divider />
 
-        {/* ---------------- Contact ---------------- */}
+        
         <SectionShell id="contact" label="04 — Contact Information">
           <div className="reveal glass relative overflow-hidden rounded-[2rem] px-6 py-16 text-center md:px-16 md:py-24">
             <div aria-hidden="true" className="grid-bg absolute inset-0 opacity-50" />
@@ -364,7 +362,7 @@ export default function Portfolio() {
                   href={links.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-ghost"
+                  className="btn btn-ghost bg-pink-800 text-white hover:bg-pink-700"
                 >
                   <LinkedInIcon /> LinkedIn
                 </a>
